@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Class_Scheduler.Views.CreateStudentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Class_Scheduler.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="CreateHeader" Content="New Student" Grid.Column="1" HorizontalAlignment="Left" FontSize="40"/>
+        <Label x:Name="NameLabel" Grid.Column="1" Grid.Row="1" Content="Name" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="23" Margin="77,10,0,0" TextWrapping="Wrap" Text="Enter Name" Background="DarkGray" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="BirthdateLabel" Grid.Column="1" Grid.Row="1" Content="Birthdate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox x:Name="BirthdateTextBox" Grid.Column="1" Grid.Row="1" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" Text="Month Day, Year" Background="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+        <Label x:Name="GradDateLabel" Grid.Column="1" Grid.Row="1" Content="Grad Date" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="GradDateBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="77,90,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="December 2020"/>
+            <ComboBoxItem Content="May 2021"/>
+        </ComboBox>
+        <Label x:Name="MajorLabel" Grid.Column="1" Grid.Row="1" Content="Major" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="MajorBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="77,130,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Computer Science"/>
+        </ComboBox>
+        <Button x:Name= "CreateButton" Grid.Column="1" Grid.Row="1" Content="Create Student" Margin="0,0,10,10" Click="CreateStudent" RenderTransformOrigin="0.5,0.5" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="106"/>
+
+    </Grid>
+</UserControl>
