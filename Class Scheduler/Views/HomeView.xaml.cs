@@ -23,6 +23,11 @@ namespace Class_Scheduler.Views
         public HomeView()
         {
             InitializeComponent();
+            List<Student> studentList = FileInputOutput.DeserializeStudents();
+            icStudentList.ItemsSource = studentList;
         }
+
+        
+
     }
 }

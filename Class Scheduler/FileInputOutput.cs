@@ -60,7 +60,7 @@ namespace Class_Scheduler
 
         }
 
-        public static void DeserializeStudents()
+        public static List<Student> DeserializeStudents()
         {
             List<Student> studentList = new List<Student>();
             string dir = @"..\..\";
@@ -85,6 +85,8 @@ namespace Class_Scheduler
             {
                 Console.WriteLine(student);
             }
+
+            return studentList;
         }
     }
 }

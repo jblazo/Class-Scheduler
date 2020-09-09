@@ -51,7 +51,7 @@ namespace Class_Scheduler.Views
                 }
                 Student newStudent = new Student(studentName, birthdate, studentMajor, graddate);
                 FileInputOutput.SerializeStudent(newStudent);
-                FileInputOutput.DeserializeStudents();
+                //FileInputOutput.DeserializeStudents();
             }
             catch
             {

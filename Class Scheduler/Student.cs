@@ -41,6 +41,17 @@ class Student{
         }
     }
 
+    public Major Major{
+        get
+        {
+            return this.majors;
+        }
+        set
+        {
+            this.majors = value;
+        }
+    }
+
     public override string ToString()
     {
         return ("Name: " + this.name + "\nBirthday: " + this.birthDate.ToString("MM/dd/yyyy")+ "\nMajor: " + this.majors.MajorName + "\nGradDate: " + this.graduationDate.Month + "/" + this.graduationDate.Year);
