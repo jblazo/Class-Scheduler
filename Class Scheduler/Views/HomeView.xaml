@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <Label x:Name="nameLabel" Grid.Column="0" Grid.Row="0" Content="Student Name" FontSize="20" />
         <Label x:Name="birthdateLabel" Grid.Column="1" Grid.Row="0" Content="Birthdate" FontSize="20" />
-        <Label x:Name="MajroLabel" Grid.Column="2" Grid.Row="0" Content="Major" FontSize="20" />
+        <Label x:Name="MajorLabel" Grid.Column="2" Grid.Row="0" Content="Major" FontSize="20" />
         <Label x:Name="GraduationDateLabel" Grid.Column="3" Grid.Row="0" Content="Graduation Date" FontSize="20" />
         <ItemsControl Name="icStudentList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
             <ItemsControl.ItemTemplate>
@@ -33,7 +33,7 @@
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Text="{Binding BirthDate}" />
+                        <TextBlock Grid.Column="1" Text="{Binding Birthday}" />
                         <TextBlock Grid.Column="2" Text="{Binding Major.MajorName}" />
                         <TextBlock Grid.Column="3" Text="{Binding GraduationDate}" />
                     </Grid>

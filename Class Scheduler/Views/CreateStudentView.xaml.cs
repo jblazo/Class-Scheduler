@@ -31,7 +31,7 @@ namespace Class_Scheduler.Views
             try
             {
                 string studentName = NameTextBox.Text;
-                DateTime birthdate = DateTime.Parse(BirthdateTextBox.Text);
+                BirthDate birthdate = new BirthDate(DateTime.Parse(BirthdateTextBox.Text));
                 string tempgraddate = GradDateBox.Text;
                 GraduationDate graddate;
                 if (tempgraddate == "December 2020")

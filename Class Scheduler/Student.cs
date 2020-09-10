@@ -3,13 +3,13 @@ using System;
 [Serializable]
 class Student{
     private string name;
-    private DateTime birthDate;
+    private BirthDate birthday;
     private Major majors;
     private GraduationDate graduationDate;
 
-    public Student(string name, DateTime birthDate, Major majors, GraduationDate graduationDate){
+    public Student(string name, BirthDate birthDate, Major majors, GraduationDate graduationDate){
         this.name = name;
-        this.birthDate = birthDate;
+        this.birthday = birthDate;
         this.majors = majors;
         this.graduationDate = graduationDate;
     }
@@ -23,12 +23,12 @@ class Student{
         }
     }
 
-    public DateTime BirthDate{
+    public BirthDate Birthday{
         get{
-            return this.birthDate;
+            return this.birthday;
         }
         set{
-            this.birthDate = value;
+            this.birthday = value;
         }
     }
 
@@ -54,6 +54,6 @@ class Student{
 
     public override string ToString()
     {
-        return ("Name: " + this.name + "\nBirthday: " + this.birthDate.ToString("MM/dd/yyyy")+ "\nMajor: " + this.majors.MajorName + "\nGradDate: " + this.graduationDate.Month + "/" + this.graduationDate.Year);
+        return ("Name: " + this.name + "\nBirthday: " + this.birthday+ "\nMajor: " + this.majors.MajorName + "\nGradDate: " + this.graduationDate.Month + "/" + this.graduationDate.Year);
     }
 }

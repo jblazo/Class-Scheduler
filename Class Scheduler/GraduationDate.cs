@@ -28,4 +28,9 @@ class GraduationDate{
             this.year = value;
         }
     }
+
+    public override string ToString()
+    {
+        return this.month + " / " + this.year;
+    }
 }

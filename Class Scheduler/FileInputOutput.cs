@@ -21,20 +21,7 @@ namespace Class_Scheduler
             BinaryFormatter formatter = new BinaryFormatter();
             if (File.Exists(serializationFile))
             {
-                FileStream fs = new FileStream(serializationFile, FileMode.Open);
-                try
-                {
-                    studentList = (List<Student>)formatter.Deserialize(fs);
-                }
-                catch (SerializationException e)
-                {
-                    Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
-                    throw;
-                }
-                finally
-                {
-                    fs.Close();
-                }
+                studentList = DeserializeStudents();
             }
             
 
@@ -42,7 +29,6 @@ namespace Class_Scheduler
             studentList.Add(student);
             try
             {
-
                 formatter.Serialize(stream, studentList);
             }
             catch(SerializationException e)
@@ -65,28 +51,33 @@ namespace Class_Scheduler
             List<Student> studentList = new List<Student>();
             string dir = @"..\..\";
             string serializationFile = Path.Combine(dir, "StudentsFile.txt");
-            FileStream fs = new FileStream(serializationFile, FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
-            try
+            if (File.Exists(serializationFile))
             {
-                studentList = (List<Student>)formatter.Deserialize(fs);
-            }
-            catch (SerializationException e)
-            {
-                Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
-                throw;
-            }
-            finally
-            {
+                FileStream fs = new FileStream(serializationFile, FileMode.Open);
+                BinaryFormatter formatter = new BinaryFormatter();
+                if (fs.Length != 0)
+                {
+                    try
+                    {
+                        studentList = (List<Student>)formatter.Deserialize(fs);
+                    }
+                    catch (SerializationException e)
+                    {
+                        Console.WriteLine("Failed to deserialize. Reason: " + e.Message);
+                        throw;
+                    }
+                }
                 fs.Close();
-            }
+                
 
-            foreach (Student student in studentList)
-            {
-                Console.WriteLine(student);
-            }
+                /*foreach (Student student in studentList)
+                {
+                    Console.WriteLine(student);
+                }*/
 
+            }
             return studentList;
+            
         }
     }
 }
