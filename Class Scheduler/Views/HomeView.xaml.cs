@@ -27,7 +27,13 @@ namespace Class_Scheduler.Views
             icStudentList.ItemsSource = studentList;
         }
 
-        
+        private void DeleteStudent(object sender, RoutedEventArgs e)
+        {
+            List<Student> studentList = FileInputOutput.DeserializeStudents();
+
+        }
+
+
 
     }
 }

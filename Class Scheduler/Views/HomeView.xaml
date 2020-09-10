@@ -13,6 +13,7 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.5*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -22,7 +23,8 @@
         <Label x:Name="birthdateLabel" Grid.Column="1" Grid.Row="0" Content="Birthdate" FontSize="20" />
         <Label x:Name="MajorLabel" Grid.Column="2" Grid.Row="0" Content="Major" FontSize="20" />
         <Label x:Name="GraduationDateLabel" Grid.Column="3" Grid.Row="0" Content="Graduation Date" FontSize="20" />
-        <ItemsControl Name="icStudentList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+        <Label x:Name="DeleteLabel" Grid.Column="4" Grid.Row="0" Content="Delete" FontSize="20" />
+        <ItemsControl Name="icStudentList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,0,0,5">
@@ -31,11 +33,13 @@
                             <ColumnDefinition Width="1*" />
                             <ColumnDefinition Width="1*" />
                             <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="0.5*" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding Name}" />
                         <TextBlock Grid.Column="1" Text="{Binding Birthday}" />
                         <TextBlock Grid.Column="2" Text="{Binding Major.MajorName}" />
                         <TextBlock Grid.Column="3" Text="{Binding GraduationDate}" />
+                        <Button Grid.Column="4" Content="-" Width="20" Height="20" Click="DeleteStudent" />
                     </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

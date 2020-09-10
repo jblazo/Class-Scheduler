@@ -24,7 +24,7 @@ namespace Class_Scheduler
         public MainWindow()
         {
             InitializeComponent();
-            
+            HomeViewModel();
             this.Title = "Class Scheduler";
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
