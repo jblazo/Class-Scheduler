@@ -58,6 +58,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BirthDate.cs" />
+    <Compile Include="Course.cs" />
     <Compile Include="FileInputOutput.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="ViewModels\CreateStudentViewModel.cs" />
