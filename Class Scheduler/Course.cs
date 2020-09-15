@@ -13,12 +13,14 @@ namespace Class_Scheduler
         private string courseDescription;
         private string courseCode;
         private string[] prerequisites;
+        private string courseName;
 
-        public Course(string courseCode, string courseDescription, string[] preReqs)
+        public Course(string courseCode, string courseDescription, string[] preReqs, string courseName)
         {
             this.courseCode = courseCode;
             this.courseDescription = courseDescription;
             this.prerequisites = preReqs;
+            this.courseName = courseName;
         }
 
         public Course()
@@ -26,6 +28,7 @@ namespace Class_Scheduler
             this.courseCode = null;
             this.courseDescription = null;
             this.prerequisites = null;
+            this.courseName = null;
         }
 
         public string CourseCode
@@ -61,6 +64,18 @@ namespace Class_Scheduler
             set
             {
                 this.prerequisites = value;
+            }
+        }
+        
+        public string CourseName
+        {
+            get
+            {
+                return this.courseName;
+            }
+            set
+            {
+                this.courseName = value;
             }
         }
     }
