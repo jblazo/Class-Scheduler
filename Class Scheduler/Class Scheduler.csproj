@@ -62,10 +62,14 @@
     <Compile Include="FileInputOutput.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\CreateCourseViewModel.cs" />
     <Compile Include="ViewModels\CreateStudentViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="Views\CourseView.xaml.cs">
       <DependentUpon>CourseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateCourseView.xaml.cs">
+      <DependentUpon>CreateCourseView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateStudentView.xaml.cs">
       <DependentUpon>CreateStudentView.xaml</DependentUpon>
@@ -87,6 +91,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CourseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateCourseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,15 +16,18 @@ using System.Windows.Shapes;
 namespace Class_Scheduler.Views
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for CreateCourseView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class CreateCourseView : UserControl
     {
-        public HomeView()
+        public CreateCourseView()
         {
             InitializeComponent();
-            List<Student> studentList = FileInputOutput.DeserializeStudents();
-            icStudentList.ItemsSource = studentList;
+        }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

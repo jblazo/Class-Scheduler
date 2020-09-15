@@ -19,6 +19,9 @@
         <DataTemplate x:Name="CourseTemplate" DataType="{x:Type viewmodels:CourseViewModel}">
             <views:CourseView DataContext="{Binding}" />
         </DataTemplate>
+        <DataTemplate x:Name="NewCourseTemplate" DataType="{x:Type viewmodels:CreateCourseViewModel}">
+            <views:CreateCourseView DataContext="{Binding}" />
+        </DataTemplate>
     </Window.Resources>
     <Grid Background="Gray">
         <Grid.ColumnDefinitions>
@@ -34,6 +37,7 @@
                 <Button x:Name="Home" Content="Home" Click="Home_Click"/>
                 <Button x:Name="NewStudent" Content="New Student" Click="NewStudent_Click"/>
                 <Button x:Name="ViewCoursesButton" Content="View Courses" Click="ViewCoursesButton_Click" />
+                <Button x:Name="CreateCourseButton" Content="Create Course" Click="CreateCourseButton_Click" />
             </StackPanel>
         </DockPanel>
         

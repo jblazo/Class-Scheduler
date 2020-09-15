@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Class_Scheduler.Views.CreateCourseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Class_Scheduler.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="CourseHeader" Content="New Course" Grid.Column="1" HorizontalAlignment="Left" FontSize="40"/>
+        <Label x:Name="CourseNameLabel" Grid.Column="1" Grid.Row="1" Content="Course Name" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="23" Margin="181,10,0,0" TextWrapping="Wrap" Text="Enter Course Name" Background="DarkGray" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="CourseCodeLabel" Grid.Column="1" Grid.Row="1" Content="Course Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox x:Name="CourseCodeTextBox" Grid.Column="1" Grid.Row="1" Height="23" Margin="181,50,0,0" TextWrapping="Wrap" Text="Enter Code" Background="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+        <Label x:Name="PreRequisitesLabel" Grid.Column="1" Grid.Row="1" Content="Prerequisites" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PreRequisitesTextBox" Grid.Column="1" Background="DarkGray"  HorizontalAlignment="Left" Height="23" Margin="181,90,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Enter Prequisite Courses" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="CourseDescriptionLabel" Grid.Column="1" Grid.Row="1" Content="Course Description" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CourseDescriptionTextBox" Grid.Column="1" Background="DarkGray" HorizontalAlignment="Left" Height="88" Margin="181,130,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Enter Description" VerticalAlignment="Top" Width="231"/>
+        <Button x:Name= "CreateButton" Grid.Column="1" Grid.Row="1" Background="DarkGray" Content="Create Course" Margin="0,0,10,10" Click="CreateButton_Click" RenderTransformOrigin="0.5,0.5" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="106"/>
+    </Grid>
+</UserControl>
