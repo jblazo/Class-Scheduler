@@ -44,5 +44,10 @@ namespace Class_Scheduler
         {
             DataContext = new CreateStudentViewModel();
         }
+
+        private void ViewCoursesButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new CourseViewModel();
+        }
     }
 }
