@@ -1,14 +1,15 @@
+using Class_Scheduler;
 using System;
 [Serializable]
 class Major{
-     private string[] classes;
+    private Course[] classes;
     private string majorName;
-     public Major(string[] classes, string MajorName){
+     public Major(Course[] classes, string MajorName){
          this.classes = classes;
          this.majorName = MajorName;
      }
 
-     public string[] Classes{
+     public Course[] Classes{
          get{
              return this.classes;
          }
