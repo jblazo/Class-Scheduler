@@ -46,8 +46,9 @@ namespace Class_Scheduler.Views
                 Major studentMajor = null;
                 if (tempMajor == "Computer Science")
                 {
-                    string[] temp2 = { "test", "test" };
-                    studentMajor = new Major(temp2, tempMajor);
+                    Course temp2 = new Course();
+                    Course[] courseArray = { temp2 };
+                    studentMajor = new Major(courseArray, tempMajor);
                 }
                 Student newStudent = new Student(studentName, birthdate, studentMajor, graddate);
                 FileInputOutput.SerializeStudent(newStudent);

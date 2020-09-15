@@ -21,6 +21,13 @@ namespace Class_Scheduler
             this.prerequisites = preReqs;
         }
 
+        public Course()
+        {
+            this.courseCode = null;
+            this.courseDescription = null;
+            this.prerequisites = null;
+        }
+
         public string CourseCode
         {
             get
