@@ -66,7 +66,7 @@ namespace Class_Scheduler
                 this.prerequisites = value;
             }
         }
-        
+
         public string CourseName
         {
             get
@@ -84,23 +84,34 @@ namespace Class_Scheduler
             get
             {
                 string returnValue = "";
-                if (this.prerequisites == null)
+                if (this.prerequisites != null)
                 {
-                    return returnValue;
+                    foreach (Course ele in this.prerequisites)
+                    {
+                        try
+                        {
+                            returnValue += (ele.CourseCode + " ");
+                        }
 
+                        catch
+                        {
+                            returnValue += "Error ";
+                        }
+                        
+                        
+                    }
+                    return returnValue;
                 }
 
                 else
                 {
-                    foreach (Course ele in this.prerequisites)
-                    {
-                        returnValue += (ele.CourseCode + " ");
-                    }
-
                     return returnValue;
                 }
+
+
+
             }
-            
+
         }
 
         public override string ToString()
