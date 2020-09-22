@@ -27,7 +27,28 @@ namespace Class_Scheduler.Views
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
+            string courseName = CourseNameTextBox.Text;
+            string courseDescription = CourseDescriptionTextBox.Text;
+            string courseCode = CourseCodeTextBox.Text;
+            string tempPreReqs = PreRequisitesTextBox.Text;
+            string[] preReqsStrings = tempPreReqs.Split(',');
+            Course[] preReqs = new Course[preReqsStrings.Length];
+            List<Course> courseList = FileInputOutput.DeserializeCourses();
+            for (int i = 0; i < preReqsStrings.Length; i++)
+            {
+                foreach (Course ele in courseList)
+                {
+                    if (ele.CourseCode == preReqsStrings[i])
+                    {
+                        preReqs[i] = ele;
+                    }
+                }
+            }
+            
 
+            Course course = new Course(courseCode, courseDescription, preReqs , courseName);
+
+            FileInputOutput.SerializeCourses(course);
         }
     }
 }

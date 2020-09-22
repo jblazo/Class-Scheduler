@@ -12,10 +12,10 @@ namespace Class_Scheduler
     {
         private string courseDescription;
         private string courseCode;
-        private string[] prerequisites;
+        private Course[] prerequisites;
         private string courseName;
 
-        public Course(string courseCode, string courseDescription, string[] preReqs, string courseName)
+        public Course(string courseCode, string courseDescription, Course[] preReqs, string courseName)
         {
             this.courseCode = courseCode;
             this.courseDescription = courseDescription;
@@ -55,7 +55,7 @@ namespace Class_Scheduler
             }
         }
 
-        public string[] PreRequisites
+        public Course[] PreRequisites
         {
             get
             {
