@@ -48,6 +48,12 @@ namespace Class_Scheduler
         private void ViewCoursesButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new CourseViewModel();
+            List<Course> test = FileInputOutput.DeserializeCourses();
+            /*foreach (Course ele in test)
+            {
+                Console.WriteLine(ele);
+            }*/
+            
         }
 
         private void CreateCourseButton_Click(object sender, RoutedEventArgs e)

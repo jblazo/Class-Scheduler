@@ -31,19 +31,27 @@ namespace Class_Scheduler.Views
             string courseDescription = CourseDescriptionTextBox.Text;
             string courseCode = CourseCodeTextBox.Text;
             string tempPreReqs = PreRequisitesTextBox.Text;
-            string[] preReqsStrings = tempPreReqs.Split(',');
-            Course[] preReqs = new Course[preReqsStrings.Length];
-            List<Course> courseList = FileInputOutput.DeserializeCourses();
-            for (int i = 0; i < preReqsStrings.Length; i++)
+            Course[] preReqs = null;
+            if (tempPreReqs.Length != 0)
             {
-                foreach (Course ele in courseList)
+                tempPreReqs = String.Concat(tempPreReqs.Where(c => !Char.IsWhiteSpace(c)));
+                string[] preReqsStrings = tempPreReqs.Split(',');
+                preReqs = new Course[preReqsStrings.Length];
+                List<Course> courseList = FileInputOutput.DeserializeCourses();
+                for (int i = 0; i < preReqsStrings.Length; i++)
                 {
-                    if (ele.CourseCode == preReqsStrings[i])
+                    foreach (Course ele in courseList)
                     {
-                        preReqs[i] = ele;
+                        if (ele.CourseCode == preReqsStrings[i])
+                        {
+                            preReqs[i] = ele;
+                        }
                     }
                 }
             }
+            
+            
+            
             
 
             Course course = new Course(courseCode, courseDescription, preReqs , courseName);

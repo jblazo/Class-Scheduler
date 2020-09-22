@@ -30,7 +30,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding CourseCode}" />
                         <TextBlock Grid.Column="1" Text="{Binding CourseDescription}" />
-                        <TextBlock Grid.Column="2" Text="{Binding PreRequisites}" />
+                        <TextBlock Grid.Column="2" Text="{Binding PrintPreReqs}" />
                     </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

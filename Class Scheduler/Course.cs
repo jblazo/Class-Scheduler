@@ -78,5 +78,34 @@ namespace Class_Scheduler
                 this.courseName = value;
             }
         }
+
+        public string PrintPreReqs
+        {
+            get
+            {
+                string returnValue = "";
+                if (this.prerequisites == null)
+                {
+                    return returnValue;
+
+                }
+
+                else
+                {
+                    foreach (Course ele in this.prerequisites)
+                    {
+                        returnValue += (ele.CourseCode + " ");
+                    }
+
+                    return returnValue;
+                }
+            }
+            
+        }
+
+        public override string ToString()
+        {
+            return (this.courseName + "\n" + this.courseCode + "\n" + this.courseDescription + "\n" + PrintPreReqs);
+        }
     }
 }
